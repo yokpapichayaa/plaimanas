@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #FFFFFF;
+  color: #000000;
+  font-family: "Hanken Grotesk", sans-serif;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.container-l {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-m {
+  max-width: 1092px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-s {
+  max-width: 978px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2, h3, h4, h5 {
+  font-weight: 900;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-size: 145px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: 80px;
+}
+
+h3 {
+  font-size: 60px;
+}
+
+h4 {
+  font-size: 40px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */
