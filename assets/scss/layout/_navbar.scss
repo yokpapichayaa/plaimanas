@@ -1,0 +1,109 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.logo{
+    width: 100%;
+    mix-blend-mode: difference;
+    // filter: brightness(0);
+    img{
+        width: 100%;
+    }
+}
+
+#header{
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    nav{
+        align-items: center;
+    }
+
+    .navbar{
+        margin-bottom: 20px;
+        background-color: $primary-color;
+        .menu-desktop{
+            text-align: center;
+            .menu-item{
+                display: inline-block;
+                transform: scale(1);
+                transform-origin: center;
+                will-change: transform;
+                transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+                cursor: pointer;
+                &:hover {
+                    transform: scale(1.2);
+                    font-weight: 700;
+                }
+                &.onhover{
+                    color: $primary-color;
+                    z-index: 99;
+                    font-weight: 700;
+                }
+            }
+            .menu-drop{
+                opacity: 0;
+                visibility: hidden;
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                background-color: $secondary-color; 
+                left: 0;
+                top: 0;
+                z-index: 20;
+                @include flex;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 50px;
+                transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+                &.onhover{
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .menu-drop-item{
+                    color: $primary-color !important;
+                    margin: 10px 0;
+                }
+            }
+        }
+        .dropdown-toggle{
+            font-size: 14px;
+            // pointer-events: none;
+            &.show{
+                border: none;
+            }
+            &:hover{
+                opacity: 60%;
+                &::after{
+                    opacity: 60%;
+                }
+            }
+        }
+        .dropdown-menu{
+            --bs-dropdown-min-width: 6.5rem;
+            border-radius: 0;
+            border: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease;
+            // display: block;
+            &.dropdown-menu[data-bs-popper]{
+                left: 2%;
+            }
+            &.onhover,.show{
+                opacity: 1;
+                visibility: visible;
+                display: block;
+            }
+            .dropdown-item{
+                font-size: 14px;
+            }
+        }
+    }
+
+    
+    .signin{
+        text-align: right;
+    }
+}
