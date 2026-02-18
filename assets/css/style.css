@@ -112,6 +112,11 @@ h2, .h2 {
     font-size: 35px !important;
   }
 }
+@media (max-width: 480px) {
+  h2, .h2 {
+    font-size: 20px !important;
+  }
+}
 
 h3, .h3 {
   font-size: 60px !important;
@@ -138,6 +143,11 @@ h4, .h4 {
 @media (max-width: 767px) {
   h4, .h4 {
     font-size: 25px !important;
+  }
+}
+@media (max-width: 576px) {
+  h4, .h4 {
+    font-size: 15px !important;
   }
 }
 

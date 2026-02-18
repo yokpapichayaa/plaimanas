@@ -14,6 +14,9 @@ h2{
     @media (max-width: $tablet) {
         font-size: 35px !important;
     }
+    @media (max-width: $mobile) {
+        font-size: 20px !important;
+    }
 }
 
 h3{
@@ -33,6 +36,9 @@ h4{
     }
     @media (max-width: $tablet) {
         font-size: 25px !important;
+    }
+    @media (max-width: $tablet-sm) {
+        font-size: 15px !important;
     }
 }
 
