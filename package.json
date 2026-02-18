@@ -2,5 +2,9 @@
   "dependencies": {
     "boostrap": "^2.0.0",
     "bootstrap": "^5.3.8"
+  },
+  "scripts": {
+    "build": "sass scss:css --no-source-map"
   }
 }
+
