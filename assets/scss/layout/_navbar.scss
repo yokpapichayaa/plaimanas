@@ -177,6 +177,7 @@
                 position: absolute;
                 left: 0;
                 bottom: 50px;
+                padding-bottom: env(safe-area-inset-bottom);
             }
         }
 
