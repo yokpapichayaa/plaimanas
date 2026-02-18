@@ -14,6 +14,7 @@ body {
   font-family: $font-main !important;
   line-height: 1.6;
   font-size: 14px;
+  overflow: hidden
 }
 
 .containers{
@@ -21,7 +22,6 @@ body {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
-  overflow: hidden;
   &--conl{
       max-width: 1400px;
   }
