@@ -1,6 +1,9 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 footer{
+    @media (max-width: $laptop) {
+        font-size: 14px;
+    }
     .title-f{
         font-weight: 600;
         margin-bottom: 15px;

@@ -21,6 +21,7 @@ body {
   margin-right: auto;
   padding-left: 20px;
   padding-right: 20px;
+  overflow: hidden;
   &--conl{
       max-width: 1400px;
   }
@@ -28,7 +29,7 @@ body {
       max-width: 1200px;
   }
   &--cons{
-      max-width: 900px;
+      max-width: 600px;
       // @include flexcenter;
   }
   &--nav{
@@ -37,10 +38,14 @@ body {
   &--footer{
       padding:41px 58px;
       background-color: $bg-footer;
+      @media (max-width: $laptop) {
+        padding:40px 35px;
+      }
   }
   &--menu{
     @include flex;
-    justify-content: space-around;
+    justify-content: center;
+    // justify-content: space-around;
   }
   &--logo{
       position: fixed;
@@ -69,6 +74,9 @@ a{
 
 section{
   margin-bottom: 100px;
+  @media (max-width: $laptop) {
+    margin-bottom: 50px;
+  }
 }
 
 video{

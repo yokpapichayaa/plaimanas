@@ -5,46 +5,69 @@
     position: relative;
     isolation: isolate;
     background-color: $primary-color;
+    overflow: hidden;
 }
 
 .banner{
     video{
         margin-top: -163px;
+        @media (max-width: $laptop) {
+           margin-top: 0;
+        }
     }
 }
 
 .sec-new{
+    position: relative;
     .box-wrap{
-            position: relative;
-            width: 666px;
-            height: 672px;
-            background-position: center;
-            background-size: cover;
-            overflow: hidden;
-            margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;     
+        justify-content: center; 
+        height: auto;
+        overflow: hidden;
         .box-text{
-            @include flexcenter;
+            position: absolute;         
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;   
+            z-index: 2;
+            .box-text-inner {
+                will-change: transform;
+                transform: translateZ(0);
+            }
+        }
+        .box-image{
             width: 100%;
-            height: 100%;
-            color: $primary-color;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-family: $font-heading;
+            height: auto;           
+            object-fit: cover;     
+            display: block;
         }
     }
 }
 
 .sec-bestseller{
+    position: relative;
     .box-wrap{
-        // @include flexcenter;
-        position: relative;
+       position: relative;
+        display: flex;
+        align-items: center;     
+        justify-content: center; 
+        height: auto;
+        overflow: hidden;
         .box-text{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: $primary-color;
-            text-transform: uppercase;
+            position: absolute;      
+            // inset: 0;               
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;   
+            z-index: 2;
+            .box-text-inner {
+                will-change: transform;
+                transform: translateZ(0);
+            }
         }
     }
 }
@@ -52,7 +75,9 @@
 .sec-collection{
     .wrap-col{
         text-align: center;
-        
+        @media (max-width: $laptop) {
+            padding: 20px;
+        }
         .box-col{
             position: relative;
             text-align: center;
@@ -83,9 +108,29 @@
                 background-size: cover;
                 background-position: top center;
                 background-repeat: no-repeat;
+                @media (max-width: $laptop) {
+                    margin: 15px 0 20px 0;
+                }
+                &.left{
+                    margin-left: 0;
+                    margin-right: 15px;
+                    @media (max-width: $laptop) {
+                       margin-right: 7px;
+                    }
+                }
                 &.right{
                     margin-right: 0;
-                    margin-left: 30px;
+                    margin-left: 15px;
+                    @media (max-width: $laptop) {
+                       margin-left: 7px;
+                    }
+                }
+                .box-text{
+                    h4{
+                        // @media (max-width: $laptop) {
+                        //     font-size: 15px !important;
+                        // }
+                    }
                 }
             }
             .box-imagecol{
@@ -98,6 +143,7 @@
                 transition: opacity 0.6s cubic-bezier(.4,0,.2,1),
                 transform 0.6s cubic-bezier(.4,0,.2,1);
                 will-change: opacity, transform;
+                height: 100%;
                 &.onhover{
                     transform: translateY(20px);
                     opacity: 0;
@@ -126,6 +172,10 @@
             padding-right: 80px; // กันช่องว่าง
             text-transform: uppercase;
             font-family: $font-heading;
+            align-items: center;
+            h3{
+                margin: 0;
+            }
         }
         .box-arrow{
             height: 70%;
@@ -159,6 +209,9 @@
         width: 100%;
         border: 0;
         margin: 20px;
+        @media (max-width: $laptop) {
+            margin: 0;
+        }
         .nav-link{
             border-radius: 22px;
             padding: 8px 32px;
@@ -312,7 +365,7 @@
 
 .box-content{
     text-align: center;
-    margin: 28px 0;
+    margin: 28px 0 0 0;
     .desc{
         width: 60%;
         margin: 0 auto;
