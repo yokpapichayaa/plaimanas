@@ -179,7 +179,6 @@ h5, .h5 {
 }
 #header .navbar .menu-desktop .menu-item {
   display: inline-block;
-  transform: scale(1);
   transform-origin: center;
   will-change: transform;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
