@@ -297,7 +297,7 @@ h5, .h5 {
 }
 #header .navbar .nav-submenu.open {
   padding: 33px 40px;
-  max-height: 500px; /* พอสำหรับจำนวนเมนู */
+  max-height: 500px;
 }
 #header .navbar .nav-submenu .nav-subitem {
   padding: 10px;
@@ -451,6 +451,9 @@ button.submit input {
 
 .banner video {
   margin-top: -163px;
+  height: 100dvh;
+  width: 100%;
+  object-fit: cover;
 }
 @media (max-width: 992px) {
   .banner video {

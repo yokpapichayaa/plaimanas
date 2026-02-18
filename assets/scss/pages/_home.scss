@@ -11,8 +11,12 @@
 .banner{
     video{
         margin-top: -163px;
+        height: 100dvh;
+        width: 100%;
+        object-fit: cover;
         @media (max-width: $laptop) {
            margin-top: 0;
+            
         }
     }
 }
@@ -57,8 +61,7 @@
         height: auto;
         overflow: hidden;
         .box-text{
-            position: absolute;      
-            // inset: 0;               
+            position: absolute;           
             display: flex;
             align-items: center;
             justify-content: center;
@@ -125,13 +128,6 @@
                        margin-left: 7px;
                     }
                 }
-                .box-text{
-                    h4{
-                        // @media (max-width: $laptop) {
-                        //     font-size: 15px !important;
-                        // }
-                    }
-                }
             }
             .box-imagecol{
                 width: 100%;
@@ -169,7 +165,7 @@
         &__group {
             display: flex;
             gap: 80px;
-            padding-right: 80px; // กันช่องว่าง
+            padding-right: 80px;
             text-transform: uppercase;
             font-family: $font-heading;
             align-items: center;
