@@ -719,6 +719,11 @@ button.submit input {
   font-family: "Hanken Grotesk", sans-serif;
   text-transform: uppercase;
 }
+@media (max-width: 992px) {
+  .sec-contact .box-form {
+    margin-top: 30px;
+  }
+}
 .sec-contact .box-form .box-radio {
   display: -webkit-box;
   display: -webkit-flex;

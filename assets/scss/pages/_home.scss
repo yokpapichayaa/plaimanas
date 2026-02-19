@@ -270,6 +270,9 @@
         }
     }
     .box-form{
+        @media (max-width: $laptop) {
+            margin-top: 30px;
+        }
         .box-radio{
             @include flex;
             .form-check{
