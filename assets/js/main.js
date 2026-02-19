@@ -17,7 +17,15 @@ includeHTML("header", "pages/components/header.html");
 includeHTML("home", "pages/home.html");
 includeHTML("footer", "pages/components/footer.html");
 
+
+
 setTimeout(() => {
+  document.addEventListener("DOMContentLoaded", function() {
+      const video = document.querySelector(".video-site");
+      console.log(video);
+      video.muted = true;
+      video.play().catch(() => {});
+  });
   const dropdown = document.querySelector(".dropdown-toggle");
   const list = document.querySelector(".dropdown-menu");
   dropdown.addEventListener("mouseenter", () => {
