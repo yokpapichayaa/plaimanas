@@ -342,7 +342,7 @@ h5, .h5 {
   padding: 20px;
   position: absolute;
   left: 0;
-  bottom: 50px;
+  bottom: 15%;
   padding-bottom: env(safe-area-inset-bottom);
 }
 #header .navbar .dropdown-toggle {
